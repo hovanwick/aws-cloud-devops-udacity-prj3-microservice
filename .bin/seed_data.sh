@@ -4,8 +4,8 @@ LOCAL_PORT=5432
 TYPE_NAME=udacity-postgresql
 REMOTE_PORT=5432
 
-POSTGRES_PASSWORD=$(kubectl get secret --namespace default $TYPE_NAME -o jsonpath="{.data.postgres-password}" | base64 -d)
-kubectl port-forward --namespace default svc/$TYPE_NAME $LOCAL_PORT:$REMOTE_PORT > /dev/null 2>&1 &
+POSTGRES_PASSWORD=$(kubectl get secret --namespace default udacity-postgresql -o jsonpath="{.data.postgres-password}" | base64 -d)
+kubectl port-forward --namespace default svc/udacity-postgresql 5432:5432 
 
 pid=$!
 echo pid: $pid

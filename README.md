@@ -56,16 +56,16 @@ This project utilizes Amazon Web Services (AWS). You'll find instructions for us
 1. Clone Project Code
 
    ```
-   git clone https://github.com/congdinh2008/aws-cloud-devops-udacity-prj3-microservice.git
+   git clone https://github.com/hovanwick/aws-cloud-devops-udacity-prj3-microservice.git
    ```
 
 ### Project Structure
 
-1. [.bin](https://github.com/congdinh2008/aws-cloud-devops-udacity-prj3-microservice/tree/main/.bin): Bash file to complete project
-2. [db](https://github.com/congdinh2008/aws-cloud-devops-udacity-prj3-microservice/tree/main/db): Scripts to seed data
-3. [deployment](https://github.com/congdinh2008/aws-cloud-devops-udacity-prj3-microservice/tree/main/deployment): Kubernetes yaml files
-4. [terraform](https://github.com/congdinh2008/aws-cloud-devops-udacity-prj3-microservice/tree/main/terraform): Terraform file to create AWS resource
-5. [screenshots](https://github.com/congdinh2008/aws-cloud-devops-udacity-prj3-microservice/tree/main/screenshots): Screenshots
+1. [.bin](https://github.com/hovanwick/aws-cloud-devops-udacity-prj3-microservice/tree/main/.bin): Bash file to complete project
+2. [db](https://github.com/hovanwick/aws-cloud-devops-udacity-prj3-microservice/tree/main/db): Scripts to seed data
+3. [deployment](https://github.com/hovanwick/aws-cloud-devops-udacity-prj3-microservice/tree/main/deployment): Kubernetes yaml files
+4. [terraform](https://github.com/hovanwick/aws-cloud-devops-udacity-prj3-microservice/tree/main/terraform): Terraform file to create AWS resource
+5. [screenshots](https://github.com/hovanwick/aws-cloud-devops-udacity-prj3-microservice/tree/main/screen): Screenshots
 
 ### How to run
 
@@ -80,10 +80,8 @@ This project utilizes Amazon Web Services (AWS). You'll find instructions for us
 9. Check web api
 10. Check logs from CloudWatch and kubectl logs pod-name
 
-You can use the following command to do:
-
 ```
-make start
+You must run the commands in the file contained in the .bin folder and run them in the order written in the Makefile file
 ```
 
 ### CloudWatch Metrics in EKS
@@ -123,26 +121,7 @@ After this is configured, you can navigate to CloudWatch in the AWS console to a
    kubectl get svc
    ```
 
-<img src="./screenshots/kubectl_get_publicbackend_load_balancer_external_ip.png">
-
-### Result
-
-1. Web API
-
-<img src="./screenshots/test_api_load_balancer_external_ip_daily_usage.png">
-
-<img src="./screenshots/test_api_load_balancer_external_ip_user_visits.png">
-
-2. CloudWatch
-
-<img src="./screenshots_feedback/CloudWatch_log_container_insights_application.png">
-<img src="./screenshots_feedback/CloudWatch_log_container_insights_application_log_stream.png">
-
-1. Kubectl logs pod
-
-<img src="./screenshots/EKS_logs_pods_request_result_with_data.png">
-
-<img src="./screenshots/EKS_logs_pods_request_result_with_data_2.png">
+<img src="screen\kubectl_get_svc.png">
 
 ### Delete Resource
 

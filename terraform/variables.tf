@@ -5,12 +5,12 @@ variable "region" {
 
 variable "access_key" {
   type    = string
-  default = "AKIAWBC2BXUUTJMPX26W"
+  default = ""
 }
 
 variable "secret_key" {
   type    = string
-  default = "AtAHAI0Q00CirxgfKHc6ak/ezQ6QDT9OEiLuDLfV"
+  default = ""
 }
 
 variable "ecr_name" {
@@ -55,15 +55,15 @@ variable "eks_worker_node" {
 
 variable "git_repository_url" {
   type    = string
-  default = ""
+  default = "https://github.com/hovanwick/aws-cloud-devops-udacity-prj3-microservice.git"
 }
 
 variable "github_personal_access_token" {
   type    = string
-  default = "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
+  default = ""
 }
 
 variable "codebuild-ecr-role" {
   type    = string
-  default = "codebuild-prj3"
+  default = "code-build-prj3"
 }
